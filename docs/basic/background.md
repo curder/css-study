@@ -100,3 +100,48 @@ background-position: left top; /* 左上角显示 */
 background-position: center center; /* 居中显示 */
 background-position: right bottom; /* 右下角显示 */
 ```
+
+## background-attachment
+
+[background-attachment](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment) 决定背景图像的位置是在视口内固定，或者随着包含它的区块滚动。
+
+常见的配置值有：
+
+- `scroll`：默认值，背景相对于元素本身固定， 而不是随着它的内容滚动。
+- `fixed`：背景相对于浏览器视口固定，不会随着它的内容滚动。
+- `local`：背景相对于元素的内容固定。
+- `inherit`：从父元素继承 `background-attachment` 属性的值。
+
+```css
+/* 关键 属性值 */
+background-attachment: scroll;
+background-attachment: fixed;
+background-attachment: local;
+
+/* 全局 属性值 */
+background-attachment: inherit;
+background-attachment: initial;
+background-attachment: unset;
+```
+
+## background
+
+[background](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background) 是一个复合属性，用于设置背景颜色、背景图片、背景平铺、背景位置等。
+
+```css
+/* 使用 <background-color> */
+background: green;
+
+/* 使用 <bg-image> 和 <repeat-style> */
+background: url("test.jpg") repeat-y;
+
+/* 使用 <box> 和 <background-color> */
+background: border-box red;
+
+/* 将背景设为一张居中放大的图片 */
+background: no-repeat center/80% url("../img/image.png");
+```
+
+:::tip 注意
+如果编写 `background-size` 属性时，`background-size` 必须紧跟在 `background-position` 之后。
+:::
