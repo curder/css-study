@@ -1,4 +1,4 @@
-# CSS 盒模型
+# CSS 盒模型 {#box-model}
 
 在 CSS 中，所有的元素都可以看作是一个盒子，这个盒子由内容、内边距、边框和外边距组成。
 
@@ -9,28 +9,29 @@ CSS 盒模型具备下面的 4 个属性：
 - 边框 `border`：元素自己的边框
 - 外边距 `margin`：元素和其他元素之间的间距
 
-> [!NOTE]
-> 内边距 `padding`、边框 `border` 和外边距 `margin` 都包括 `top`、`right`、`bottom` 和 `left` 四个边的属性。
+::: tip
+内边距 `padding`、边框 `border` 和外边距 `margin` 都包括 `top`、`right`、`bottom` 和 `left` 四个边的属性。
+:::
 
-## 内容 content
+## 内容 content {#content}
 
-### 宽度和高度
+### 宽度和高度 {#width-and-height}
 
 内容的宽度和高度由 `width` 和 `height` 两个属性控制。
 
 - `width`：元素的宽度，默认值为 `auto`
 
-  > [!TIP]
-  >
-  > 默认宽度 `auto`，对于块元素 block 是独占一行的，对于行内级元素 inline 是包裹内容的，对于行内块元素 inline-block 是包裹内容的，对于替换元素 `img`、`video` 等是包裹内容的。
+  ::: tip
+  默认宽度 `auto`，对于块元素 block 是独占一行的，对于行内级元素 inline 是包裹内容的，对于行内块元素 inline-block 是包裹内容的，对于替换元素 `img`、`video` 等是包裹内容的。
+  :::
 
 - `height`：元素的高度
 
-> [!CAUTION]
->
-> 对于行内级非替换元素来说, 设置宽高是无效的。
+  ::: tip
+  对于行内级非替换元素来说, 设置宽高是无效的。
+  :::
 
-### 最大宽度和高度
+### 最大宽度和高度 {#max-width-and-height}
 
 除了可以设置 `width` 和 `height` 之外，还可以设置 `min-width`、`max-width`、`min-height` 和 `max-height` 来限制元素的最小/最大的宽度/高度。
 
@@ -40,7 +41,7 @@ CSS 盒模型具备下面的 4 个属性：
 - `min-height`：最小高度，无论内容多少，高度都大于或等于`min-height`
 - `max-height`：最大高度，无论内容多少，高度都小于或等于`max-height`
 
-## 内边距 padding
+## 内边距 padding {#padding}
 
 [`padding`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding) 属性用于设置元素的内边距，即**边框和内容之间的间距**。
 
@@ -62,7 +63,7 @@ padding 包括 4 个方向的取值：
 
 `padding` 缩写属性是从零点钟方向开始, 沿着顺时针转动的, 也就是上右下左的顺序。
 
-## 边框 border
+## 边框 border {#border}
 
 [`border`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border) 属性用于设置元素的边框。
 
@@ -96,10 +97,11 @@ border-bottom: 1px solid red;
 border-left: 1px solid red;
 ```
 
-> [!IMPORTANT]
-> 使用上面的方式编写的边框颜色、宽度和样式时顺序任意。
+::: danger 请注意
+使用上面的方式编写的边框颜色、宽度和样式时顺序任意。
+:::
 
-### 边框宽度 border-width
+### 边框宽度 border-width {#border-width}
 
 [`border-width`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-width) 设置边框宽度。
 
@@ -121,7 +123,7 @@ border-bottom-width: 1px;
 border-left-width: 1px;
 ```
 
-### 边框样式 border-style
+### 边框样式 border-style {#border-style}
 
 [`border-style`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-style) 设置边框样式。
 
@@ -143,7 +145,7 @@ border-bottom-style: solid;
 border-left-style: solid;
 ```
 
-### 边框颜色 border-color
+### 边框颜色 border-color {#border-color}
 
 [`border-color`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-color) 设置边框颜色。
 
@@ -165,7 +167,7 @@ border-bottom-color: red;
 border-left-color: red;
 ```
 
-### 边框圆角 border-radius
+### 边框圆角 border-radius {#border-radius}
 
 [border-radius](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius) 设置边框圆角。
 
@@ -192,18 +194,21 @@ border-bottom-left-radius: 10px;
 - 数值：通常用来设置小的圆角, 比如 `6px`
 - 百分比：通常用来设置大的圆角, 比如 `50%`
 
-> [!NOTE]
-> 如果一个元素是一个正方形，那么设置 `border-radius: 50%` 可以将其变成一个圆形。
->
-> ```css
-> .square {
->   width: 200px;
->   height: 200px;
->   border-radius: 50%;
-> }
-> ```
+::: tip
 
-## 外边距 margin
+如果一个元素是一个正方形，那么设置 `border-radius: 50%` 可以将其变成一个圆形。
+
+```css
+.square {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+```
+
+:::
+
+## 外边距 margin {#margin}
 
 [`margin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin) 属性用于设置元素的外边距，即**元素和其他元素之间的间距**。
 
@@ -224,10 +229,11 @@ border-bottom-left-radius: 10px;
 
 `margin` 缩写属性是从零点钟方向开始, 沿着顺时针转动的, 也就是上右下左的顺序。
 
-> [!NOTE]
-> 外边距 `margin` 可以为负值。
+::: tip
+外边距 `margin` 可以为负值。
+:::
 
-### margin 传递
+### margin 传递 {#margin-pass}
 
 外边距 `margin` 传递是指当两个元素的外边距相遇时，会发生外边距的传递。
 
@@ -241,14 +247,14 @@ border-bottom-left-radius: 10px;
 - 给父元素设置 `border` 属性
 - 给父元素设置 `overflow: auto` (BFC)
 
-> [!TIP]
->
-> **`margin` 和 `padding` 设置间距的建议**
->
-> - `margin` 一般是用来设置兄弟元素之间的间距
-> - `padding` 一般是用来设置父子元素之间的间距
+::: tip
+**`margin` 和 `padding` 设置间距的建议**
 
-### margin 折叠
+- `margin` 一般是用来设置兄弟元素之间的间距
+- `padding` 一般是用来设置父子元素之间的间距
+  :::
+
+### margin 折叠 {#margin-collapse}
 
 垂直方向上相邻的 2 个外边距 margin（`margin-top` 和`margin-bottom`）有可能会合并为 1 个 外边距 margin，这种现象叫做折叠（collapse）。
 
@@ -279,7 +285,7 @@ border-bottom-left-radius: 10px;
 
 在真实开发中，通过设置一个元素的外边距 `margin` 来防止垂直方向的折叠是比较常见的做法。
 
-### margin 水平居中
+### margin 水平居中 {#margin-auto}
 
 在一些需求中，需要元素在父元素中水平居中显示（父元素一般都是块级元素、inline-block）
 
@@ -304,7 +310,7 @@ border-bottom-left-radius: 10px;
 
   ::: warning 注意
   `margin: 0 auto` 可以让块级元素 block 水平居中。
-  
+
   **`margin: 0 auto` 属性应该设置在块级元素上。**
   :::
 
@@ -334,9 +340,9 @@ border-bottom-left-radius: 10px;
   **`text-align` 属性应该设置在父元素上。**
   :::
 
-## 其它
+## 其它 {#other}
 
-### 外轮廓 outline
+### 外轮廓 outline {#outline}
 
 [`outline`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline) 是元素的外轮廓。
 
@@ -361,8 +367,9 @@ outline-style: solid;
 outline-color: red;
 ```
 
-> [!IMPORTANT]
-> 使用上面的方式编写的外轮廓颜色、宽度和样式时顺序任意。
+::: danger 请注意
+使用上面的方式编写的外轮廓颜色、宽度和样式时顺序任意。
+:::
 
 `outline` 经常用于去除元素的默认焦点样式。
 
@@ -374,7 +381,7 @@ input {
 }
 ```
 
-### 盒子阴影 `box-shadow`
+### 盒子阴影 `box-shadow` {#box-shadow}
 
 [`box-shadow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow) 属性可以设置一个或者多个阴影。
 
@@ -397,10 +404,11 @@ input {
 }
 ```
 
-> [!TIP]
-> 如果需要在线调试 `box-shadow` 的效果，可以访问 [box-shadow.dev](https://box-shadow.dev/) 或者 [box-shadow-generator](https://cssgenerator.pl/en/box-shadow-generator/)。
+::: tip
+如果需要在线调试 `box-shadow` 的效果，可以访问 [box-shadow.dev](https://box-shadow.dev/) 或者 [box-shadow-generator](https://cssgenerator.pl/en/box-shadow-generator/)。
+:::
 
-### 文字阴影 `text-shadow`
+### 文字阴影 `text-shadow` {#text-shadow}
 
 [`text-shadow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow) 属性可以设置一个或者多个文字的阴影。
 
@@ -421,23 +429,24 @@ input {
 }
 ```
 
-> [!TIP]
-> 如果需要在线调试 `text-shadow` 的效果，可以访问 [text-shadow-generator](https://cssgenerator.pl/en/text-shadow-generator/)。
+::: tip
+如果需要在线调试 `text-shadow` 的效果，可以访问 [text-shadow-generator](https://cssgenerator.pl/en/text-shadow-generator/)。
+:::
 
-### 行内非替换元素
+### 行内非替换元素 {#inline-non-replacement}
 
 常见的行内非替换元素有：`<span>`、`<a>`、`<strong>`、`<label>` 和 `<code>` 等。
 
 对于行内非替换元素来说，除了设置宽、高无效外，还有如下的属性对其无效：`margin-top`、`margin-bottom`、`padding-top`、`padding-bottom`、`border-top` 和 `border-bottom`。
 
-### box-sizing
+### box-sizing {#box-sizing}
 
 [box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing) 用来设置盒子模型中宽高的行为。
 
 - `content-box`：默认值，元素的宽高是内容的宽高，将 `padding`、`border` 布置在 `width`、`height` 外边
 - `border-box`：元素的宽高是内容的宽高加上边框的宽高，将 `padding`、`border` 布置在 `width`、`height` 里边
 
-#### context-box
+#### context-box {#context-box}
 
 尺寸计算公式：
 
@@ -449,7 +458,7 @@ input {
 - 元素的实际占用宽度 = `border` + `padding` + `width`
 - 元素的实际占用高度 = `border` + `padding` + `height`
 
-#### border-box
+#### border-box {#border-box}
 
 尺寸计算公式：
 
