@@ -302,6 +302,12 @@ border-bottom-left-radius: 10px;
   </body>
   ```
 
+  ::: warning 注意
+  `margin: 0 auto` 可以让块级元素 block 水平居中。
+  
+  **`margin: 0 auto` 属性应该设置在块级元素上。**
+  :::
+
 - 对于行内级元素 inline 和行内块级元素 inline-block 来说，使用 `text-align: center` 可以实现水平居中。
 
   ```html
@@ -321,6 +327,12 @@ border-bottom-left-radius: 10px;
     <div class="box"></div>
   </body>
   ```
+
+  ::: warning 注意
+  `text-align` 可以让行内级元素 inline 和行内块级元素 inline-block 水平居中。
+
+  **`text-align` 属性应该设置在父元素上。**
+  :::
 
 ## 其它
 
