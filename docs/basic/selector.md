@@ -351,7 +351,7 @@ a:hover {
   }
   ```
 
-- `::first-line` 
+- `::first-line`
 
   ```css
   /* 匹配 <p> 元素的第一行 */
@@ -368,3 +368,159 @@ a:hover {
     font-size: 30px;
   }
   ```
+
+## 结构伪类选择器 {#structure-pseudo-class-selector}
+
+结构伪类选择器用于选择元素的特定位置。
+
+常见的结构伪类选择器有：
+
+- [`:nth-child()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child)
+- [`:nth-last-child()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-child)
+- [`:nth-of-type()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-of-type)
+- [`:nth-last-of-type()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-of-type)
+- `:not()`
+
+### `:nth-child()`
+
+通过元素在父元素的子元素列表中的索引来选择元素。
+
+假如有如下结构，可以通过下面的结构伪类选择器选择元素。
+
+```html
+<!-- ul>li{item$}*5 -->
+<ul>
+  <li>item1</li>
+  <li>item2</li>
+  <li>item3</li>
+  <li>item4</li>
+  <li>item5</li>
+</ul>
+```
+
+- `:nth-child(1)` 匹配第一个子元素
+
+  ```css
+  li:nth-child(1) {
+    color: red;
+  }
+  ```
+
+- `nth-child(2n)` 匹配偶数子元素（第 2、4、6...个子元素）
+
+  ```css
+  li:nth-child(2n) {
+    color: red;
+  }
+  ```
+
+- `nth-child(2n+1)` 匹配奇数子元素（第 1、3、5...个子元素）
+
+  ```css
+  li:nth-child(2n + 1) {
+    color: red;
+  }
+  ```
+
+- `nth-child(-n + 2)` 匹配前两个子元素
+  ```css
+  li:nth-child(-n + 2) {
+    color: red;
+  }
+  ```
+
+### `:nth-last-child()`
+
+从兄弟节点中从后往前匹配处于某些位置的元素，它的用法与 `:nth-child()` 类似，但它是最后一个子元素开始往前计数。
+
+假如有如下结构，可以通过下面的结构伪类选择器选择元素。
+
+```html
+<!-- ul>li{item$}*5 -->
+<ul>
+  <li>item1</li>
+  <li>item2</li>
+  <li>item3</li>
+  <li>item4</li>
+  <li>item5</li>
+</ul>
+```
+
+- `nth-last-child(1)`，代表倒数第一个子元素
+
+  ```css
+  li:nth-last-child(1) {
+    color: red;
+  }
+  ```
+
+- `nth-last-child(-n + 2)`，代表最后 2 个子元素
+
+  ```css
+  li:nth-last-child(-n + 2) {
+    color: red;
+  }
+  ```
+
+### `:nth-of-type()`
+
+基于相同类型（标签名称）的兄弟元素中的位置来匹配元素。
+
+它的用法与 `:nth-child()` 类似，但它是基于**相同类型**的兄弟元素中的位置来匹配元素。
+
+假如有如下结构，选择 `.box` 元素的子元素中的第三个 `div` 元素。
+
+```html
+<div class="box">
+  <div>item01</div>
+  <div>item02</div>
+  <img />
+  <p>item03</p>
+  <div>item01</div>
+  <div>item02</div>
+  <div>item03</div>
+</div>
+```
+
+此时，如果使用 `:nth-child(3)` 选择器，会选择 `.box` 元素的子元素中的第三个元素，而不是第三个 `div` 元素。
+
+```css
+/* 使用 :nth-child() 不会生效，因为第三个子元素不是 div */
+.box div:nth-child(3) {
+  color: red;
+}
+
+/* 使用 :nth-of-type() 会生效 */
+.box div:nth-of-type(3) {
+  color: red;
+}
+```
+
+### `:nth-last-of-type()`
+
+从兄弟元素中从后往前匹配处于某些位置的元素。
+
+它的用法与 `:nth-of-type()` 类似，但它是最后一个子元素开始往前计数。
+
+假如有如下结构，选择 `.box` 元素的子元素中的倒数第 4 个 `div` 元素。
+
+```html
+<div class="box">
+  <div>item01</div>
+  <div>item02</div>
+  <img />
+  <p>item03</p>
+  <div>item01</div>
+  <div>item02</div>
+  <div>item03</div>
+</div>
+```
+
+此时，如果使用 `:nth-last-of-type(4)` 选择器，会选择 `.box` 元素的子元素中的倒数第 4 个 `div` 元素。
+
+```css
+/* 使用 :nth-last-of-type() 会生效 */
+.box div:nth-last-of-type(4) {
+  color: red;
+}
+```
