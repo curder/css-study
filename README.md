@@ -18,7 +18,7 @@ yarn
 
 # 3. 编译
 ## 开发
-yarn docs:dev
+yarn dev
 ## 发布
-yarn docs:build
+yarn build
 ```
