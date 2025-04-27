@@ -17,6 +17,16 @@ export default defineConfig({
           { text: "CSS 属性特性", link: "/basic/property-feature" },
           { text: "CSS 盒模型", link: "/basic/box-model" },
           { text: "CSS 设置背景", link: "/basic/background" },
+          {
+            text: "常用元素",
+            link: "/basic/elements/list",
+            collapsed: true,
+            items: [
+              { text: "列表 List", link: "/basic/elements/list" },
+              { text: "表格 Table", link: "/basic/elements/table" },
+              { text: "表单 Form", link: "/basic/elements/form" },
+            ],
+          },
         ],
       },
     ],
