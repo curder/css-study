@@ -208,6 +208,47 @@ border-bottom-left-radius: 10px;
 
 :::
 
+### border 的图形 {#border-shape}
+
+使用 `border` 属性可以绘制一些图形。
+
+:::code-group
+
+```html [绘制三角形]
+<style>
+  .container {
+    width: 100px; /* 宽 */
+    height: 100px; /* 高 */
+
+    border: 50px solid transparent; /* 边框 */
+    border-bottom-color: red; /* 下边框颜色 */
+
+    box-sizing: border-box; /* 宽高包含边框 */
+  }
+</style>
+
+<div class="container"></div>
+```
+
+```html [绘制圆形]
+<style>
+  .container {
+    width: 50px; /* 宽 */
+    height: 50px; /* 高 */
+
+    border: 25px solid red; /* 边框 */
+    border-radius: 100%; /* 圆角 */
+
+    box-sizing: border-box; /* 宽高包含边框 */
+  }
+</style>
+<div class="container"></div>
+```
+
+:::
+
+还可以访问 [Css Tricks](https://css-tricks.com/the-shapes-of-css/#top-of-site) 查看使用 `border` 绘制更多的图形。
+
 ## 外边距 margin {#margin}
 
 [`margin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin) 属性用于设置元素的外边距，即**元素和其他元素之间的间距**。
