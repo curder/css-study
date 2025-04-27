@@ -183,9 +183,11 @@
 - `font-stretch`
 - `line-height`
 
-> [!NOTE]
-> 其中 `font-size` 和 `font-family` 是必须设置的。
-> 其它是可选的
+::: tip
+其中 `font-size` 和 `font-family` 是必须设置的。
+
+其它是可选的
+:::
 
 ```css
 /* font-size font-family */
