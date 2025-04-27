@@ -290,3 +290,21 @@ textarea {
 ```html
 <option value="1" selected></option>
 ```
+
+## `form` 元素 {#form-element-attribute}
+
+[`form` 元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/form) 通常作为表单元素的父元素，用来包裹表单元素，此区域包含交互控件，用于向 Web 服务器提交信息。
+
+`form` 常见的属性有：
+
+- `action`：指定表单提交的 URL
+- `method`：指定表单提交的方法，有 `get` 和 `post` 两种
+- `target`：指定表单提交的目标，有 `_self`、`_blank`、`_parent`、`_top` 四种
+
+```html
+<form action="/" method="get" target="_self">
+  <input type="text" name="username" />
+  <input type="password" name="password" />
+  <input type="submit" value="提交" />
+</form>
+```
