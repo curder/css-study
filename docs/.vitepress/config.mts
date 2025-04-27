@@ -74,6 +74,7 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
             { text: "表单 Form", link: "form" },
           ],
         },
+        { text: "Emmet 常用语法", link: "emmet" },
       ],
     },
   ];
