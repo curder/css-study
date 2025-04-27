@@ -1,10 +1,10 @@
-# CSS 属性
+# CSS 属性 {#css-property}
 
-## 文本
+## 文本 {#text}
 
 常见的文本属性包括：**`text-decoration`**、`text-transform`、`text-indent`、**`text-align`**、`word-spacing`、`letter-spacing` 等。
 
-### text-decoration
+### text-decoration {#text-decoration}
 
 [`text-decoration`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration) 是用来设置文本的修饰的。
 
@@ -16,7 +16,7 @@
 - `overline` 上划线
 - `blink` 闪烁
 
-### text-transform
+### text-transform {#text-transform}
 
 [`text-transform`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform) 用来设置文本的大小写。
 
@@ -27,7 +27,7 @@
 - `uppercase` 全部大写
 - `lowercase` 全部小写
 
-### text-indent
+### text-indent {#text-indent}
 
 [`text-indent`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-indent) 用来设置文本的首行缩进。
 
@@ -35,7 +35,7 @@
 
 `length` 长度值，比如 `32px` 或 `2em`
 
-### text-align
+### text-align {#text-align}
 
 [`text-align`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align) 用来设置**行内级元素**相对它的父元素的对齐方式。
 
@@ -68,7 +68,7 @@
 
 - `justify` 两端对齐
 
-### word-spacing
+### word-spacing {#word-spacing}
 
 [`word-spacing`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-spacing) 用来设置单词之间的间距。
 
@@ -76,7 +76,7 @@
 
 - `length` 长度值，比如 `2px` 或 `1em`
 
-### letter-spacing
+### letter-spacing {#letter-spacing}
 
 [`letter-spacing`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/letter-spacing) 用来设置字母之间的间距。
 
@@ -84,11 +84,11 @@
 
 - `length` 长度值，比如 `2px` 或 `1em`
 
-## 字体
+## 字体 {#font}
 
 常见的字体属性包括：`font-size`、`font-family`、`font-weight`、`line-height` 等。
 
-### font-size
+### font-size {#font-size}
 
 [`font-size`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size) 用来设置字体的大小，默认情况下，字体大小为 `16px`。
 
@@ -111,7 +111,7 @@
   }
   ```
 
-### font-family
+### font-family {#font-family}
 
 [`font-family`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-family) 用来设置字体的类型。
 
@@ -125,7 +125,7 @@
 - `serif` 衬线字体
 - `sans-serif` 无衬线字体
 
-### font-weight
+### font-weight {#font-weight}
 
 [`font-weight`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight) 用来设置字体的粗细。
 
@@ -136,7 +136,7 @@
 - `lighter` 更细（取值 100）
 - `number` 数字，比如 `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900`
 
-### font-style
+### font-style {#font-style}
 
 [`font-style`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style) 用来设置字体的风格。
 
@@ -151,7 +151,7 @@
 - `italic` 斜体是指字体本身的斜体，比如宋体的斜体，微软雅黑的斜体
 - `oblique` 文本倾斜
 
-### font-variant
+### font-variant {#font-variant}
 
 [`font-variant`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant) 影响小写字母的显示形式。
 
@@ -160,7 +160,7 @@
 - `normal` 常规显示（默认）
 - `small-caps` 将小写字母替换为缩小过的大写字母
 
-### line-height
+### line-height {#line-height}
 
 [`line-height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height) 用来设置文本的行高。
 
@@ -171,7 +171,7 @@
 - `length` 长度值，比如 `16px` 或 `1em`
 - `number` 数字，比如 `1.5`(相对于字体大小的倍数)
 
-### font
+### font {#font-short}
 
 [`font`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font) 是一个复合属性，用来设置字体的大小、类型、粗细、行高等。
 
