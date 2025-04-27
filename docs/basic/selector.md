@@ -379,9 +379,8 @@ a:hover {
 - [`:nth-last-child()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-child)
 - [`:nth-of-type()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-of-type)
 - [`:nth-last-of-type()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-of-type)
-- `:not()`
 
-### `:nth-child()`
+### `:nth-child()` {#nth-child}
 
 通过元素在父元素的子元素列表中的索引来选择元素。
 
@@ -429,7 +428,7 @@ a:hover {
   }
   ```
 
-### `:nth-last-child()`
+### `:nth-last-child()` {#nth-last-child}
 
 从兄弟节点中从后往前匹配处于某些位置的元素，它的用法与 `:nth-child()` 类似，但它是最后一个子元素开始往前计数。
 
@@ -462,7 +461,7 @@ a:hover {
   }
   ```
 
-### `:nth-of-type()`
+### `:nth-of-type()` {#nth-of-type}
 
 基于相同类型（标签名称）的兄弟元素中的位置来匹配元素。
 
@@ -496,7 +495,7 @@ a:hover {
 }
 ```
 
-### `:nth-last-of-type()`
+### `:nth-last-of-type()` {#nth-last-of-type}
 
 从兄弟元素中从后往前匹配处于某些位置的元素。
 
@@ -523,4 +522,137 @@ a:hover {
 .box div:nth-last-of-type(4) {
   color: red;
 }
+```
+
+### `:first-child` {#first-child}
+
+选择父元素的第一个子元素。
+
+```css
+li:first-child {
+  color: red;
+}
+```
+
+等同于 `:nth-child(1)`。
+
+### `:last-child` {#last-child}
+
+选择父元素的最后一个子元素。
+
+```css
+li:last-child {
+  color: red;
+}
+```
+
+等同于 `:nth-last-child(1)`。
+
+### `:first-of-type` {#first-of-type}
+
+基于相同类型（标签名称）的兄弟元素中的位置来匹配第一个元素。
+
+```css
+li:first-of-type {
+  color: red;
+}
+```
+
+等同于 `:nth-of-type(1)`。
+
+### `:last-of-type` {#last-of-type}
+
+基于相同类型（标签名称）的兄弟元素中的位置来匹配最后一个元素。
+
+```css
+li:last-of-type {
+  color: red;
+}
+```
+
+等同于 `:nth-last-of-type(1)`。
+
+### `:only-child` {#only-child}
+
+选择父元素中只有一个子元素的元素。
+
+```html {8}
+<style>
+  li:only-child {
+    color: red;
+  }
+</style>
+
+<ul>
+  <li>item1</li>
+</ul>
+<ul>
+  <li>item1</li>
+  <li>item2</li>
+</ul>
+```
+
+### `:only-of-type` {#only-of-type}
+
+CSS 伪类代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。
+
+```css
+li:only-of-type {
+  color: red;
+}
+```
+
+### `:root` {#root}
+
+选择文档的根元素。
+
+在声明全局 CSS 变量时 :root 会很有用：
+
+```css
+:root {
+  --main-color: hotpink;
+  --pane-padding: 5px 42px;
+}
+```
+
+### `:empty` {#empty}
+
+选择没有任何子元素（包括文本节点）的元素。
+
+比如隐藏空的段落：
+
+```html {10}
+<style>
+  p {
+    margin: 10px 20px;
+  }
+  p:empty {
+    display: none;
+  }
+</style>
+<p>这是一个段落。</p>
+<p></p>
+<p>这是另一个段落。</p>
+```
+
+### `:not()` {#not}
+
+选择器用于选择不匹配某个特定选择器的元素。
+
+比如选择所有不是 `p` 元素的元素：
+
+```html {8,12}
+<style>
+  .container :not(p) {
+    color: red;
+  }
+</style>
+
+<div class="container">
+  <div>item00</div>
+  <div class="item">item01</div>
+  <div class="item">item02</div>
+  <div class="item">item03</div>
+  <div class="other">item04</div>
+</div>
 ```
