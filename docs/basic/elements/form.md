@@ -2,13 +2,13 @@
 
 表单元素是用来收集用户输入的元素，常见的表单元素有：
 
-- `form`：表单，其他表单元素都是它的后台元素
 - `input`：单行输入框
+- `label`：标签
+- `button`：按钮
 - `textarea`：多行输入框
 - `select`：下拉框
   - `option`：下拉框选项
-- `button`：按钮
-- `label`：标签
+- `form`：表单，其他表单元素都是它的后台元素
 
 ## input 元素 {#input-element}
 
@@ -223,4 +223,70 @@ label 可以跟某个 input 绑定，点击 label 就可以激活对应的 input
   Password:
   <input type="password" id="password" />
 </label>
+```
+
+## `textarea` 元素 {#textarea-element}
+
+[`textarea` 元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/textarea)可以让用户输入多行文本。
+
+```html
+<textarea rows="10" cols="30">
+  请输入多行文本
+</textarea>
+```
+
+`textarea` 元素常用的属性有：
+
+- `rows`：文本框的行数
+- `cols`：文本框的列数
+
+默认情况下 `textarea` 允许用户调整输入框大小，可以使用 CSS 属性中的 `resize` 来控制。
+
+```css
+textarea {
+  resize: none; /* 禁止调整大小 */
+  resize: horizontal; /* 只允许水平调整大小 */
+  resize: vertical; /* 只允许垂直调整大小 */
+  resize: both; /* 允许水平和垂直调整大小 */
+}
+```
+
+- `none` 用户无法调整大小
+- `horizontal` 用户只能水平调整大小
+- `vertical` 用户只能垂直调整大小
+- `both` 用户可以水平和垂直调整大小
+
+## `select` 元素 {#select-element}
+
+[`select` 元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/select)可以让用户选择一个值。
+
+`option` 是 select 的子元素，一个 `option` 代表一个选项。
+
+```html
+<select>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+```
+
+### select 常用属性 {#select-element-attribute}
+
+- `multiple`：允许用户选择多个值
+- `size`：选择框的行数，默认为 `1`
+
+```html
+<select multiple size="2">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+```
+
+### `option` 常用属性 {#option-element-attribute}
+
+`option` 常用属性是 `selected`，表示默认选中。
+
+```html
+<option value="1" selected></option>
 ```
