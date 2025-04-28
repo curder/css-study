@@ -6,10 +6,12 @@
 - [CSS 盒模型](./basic/box-model.md)
 - [CSS 设置背景](./basic/background.md)
 - [CSS 精灵图](./basic/sprite.md)
+- [CSS 元素定位](./basic/position.md)
 - [常用元素](./basic/elements/list.md)
   - [列表 List](./basic/elements/list.md)
   - [表格 Table](./basic/elements/table.md)
   - [表单 Form](./basic/elements/form.md)
+- [Emmet 常用语法](./basic/emmet.md)
 
 ## 常用链接
 
