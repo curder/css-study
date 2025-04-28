@@ -215,27 +215,32 @@
 - `length` 长度值，比如 `16px` 或 `1em`
 - `number` 数字，比如 `1.5`(相对于字体大小的倍数)
 
-### font {
-
-#font-short;
-}
+### font {#font-short}
 
 [`font`](https: //developer.mozilla.org/zh-CN/docs/Web/CSS/font) 是一个复合属性，用来设置字体的大小、类型、粗细、行高等。
 
-- - - `font-size` \* _ - _ _ `font-family` _ _ -`font-style` - `font-variant` -
-      `font-weight` - `font-stretch` - `line-height`: : : tip 其中 `font-size` 和
-      `font-family` 是必须设置的。 其它是可选的: : : ```css
-      /_ font-size font-family \*/ font: 1.2em "Fira Sans", sans-serif;
+- `font-size`
+- `font-family`
+- `font-style`
+- `font-variant`
+- `font-weight`
+- `font-stretch`
+- `line-height`
 
-/_ font-size/line-height font-family _/
+::: tip
+其中 `font-size` 和`font-family` 是必须设置的。 其它是可选的
+:::
+
+```css
+/* font-size font-family */
+font: 1.2em "Fira Sans", sans-serif;
+
+/* font-size/line-height font-family */
 font: 1.2em/2 "Fira Sans", sans-serif;
 
-/_ font-style font-weight font-size font-family _/
+/* font-style font-weight font-size font-family */
 font: italic bold 1.2em "Fira Sans", sans-serif;
 
-/_ font-stretch font-variant font-size font-family _/
+/* font-stretch font-variant font-size font-family */
 font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
-
-```
-
 ```
