@@ -1,5 +1,35 @@
 # CSS 属性 {#css-property}
 
+## 通用 {#common}
+
+### `cursor` {#cursor}
+
+cursor 可以设置鼠标指针（光标）在元素上面时的显示样式。
+
+常见的取值有：
+
+- `default` 默认光标（通常是一个箭头）
+- `pointer` 小手
+- `move` 移动
+- `text` 文本
+- `wait` 等待
+- `help` 帮助
+- `not-allowed` 禁止
+- `none` 无光标
+
+  ```html
+  <style>
+    div.cursor {
+      width: 100px;
+      height: 100px;
+      background-color: #eaeaea;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="cursor"></div>
+  ```
+
 ## 文本 {#text}
 
 常见的文本属性包括：**`text-decoration`**、`text-transform`、`text-indent`、**`text-align`**、`word-spacing`、`letter-spacing` 等。
