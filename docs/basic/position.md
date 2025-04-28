@@ -175,6 +175,41 @@
 </div>
 ```
 
+### 粘性定位 `sticky` {#position-sticky}
+
+`sticky` 元素在跨越特定阈值前为相对定位，之后为固定定位。
+
+它可以看作是相对定位和固定(绝对)定位的结合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点时，就会变成固定(绝对)定位。
+
+`left`、`top`、`right`、`bottom` 属性用于指定元素相对于其最近的已定位父元素的偏移量。
+
+```html {5,6}
+<style>
+  .nav {
+    background-color: #f00;
+    color: #fff;
+    position: sticky; /* 粘性定位 */
+    top: 0; /* 距离顶部的距离 */
+  }
+</style>
+<h1>标题</h1>
+<div class="nav">
+  <span>手机</span>
+  <span>电脑</span>
+  <span>衣服</span>
+  <span>鞋子</span>
+</div>
+
+<ul>
+  <li>列表数据01</li>
+  <li>......</li>
+</ul>
+```
+
+::: tip
+`position: sticky;` 是相对于最近的滚动祖先包含滚动视口的。
+:::
+
 ## position 定位总结 {#position-summary}
 
 | 定位方式            | 脱离标准流         | 定位元素           | 绝对定位元素       | 定位参照对象                                                        |
