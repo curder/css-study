@@ -160,6 +160,50 @@
 - `normal` 常规显示（默认）
 - `small-caps` 将小写字母替换为缩小过的大写字母
 
+### `@font-face` {#font-face}
+
+使用 [@font-face](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@font-face) 用来定义自定义字体。
+
+当需要的字体不在系统中，就可以使用 `@font-face` 定义自定义字体。
+使用 `@font-face` 定义自定义字体时，需要指定以下属性：
+
+- `font-family` 指定字体名称，方便后续引用
+
+- `src` 字体文件的路径，可以是本地文件，也可以是网络文件，也可以同时指定多个字体文件，每个字体文件之间用逗号隔开。
+  ```css
+  @font-face {
+    font-family: "myFont";
+    src: url("https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-100-italic.woff");
+    /* src: url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-greek-100-italic.woff2) format('woff2'), url(https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-greek-100-italic.woff) format('woff'); */
+  }
+  ```
+
+::: tabs
+=== 源代码
+
+```html{3-6,9}
+<style>
+  /* 定义字体 */
+  @font-face {
+    font-family: "myFont";
+    src: url("https://fonts.bunny.net/jetbrains-mono/files/jetbrains-mono-latin-100-italic.woff");
+  }
+  /* 使用字体 */
+  .container {
+    font-family: "myFont";
+    font-size: 48px;
+    text-align: center;
+    color: #333;
+  }
+</style>
+
+<div class="container">Hello, World!</div>
+```
+
+=== 预览
+![](./images/custom-font.png)
+:::
+
 ### line-height {#line-height}
 
 [`line-height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height) 用来设置文本的行高。
@@ -171,34 +215,27 @@
 - `length` 长度值，比如 `16px` 或 `1em`
 - `number` 数字，比如 `1.5`(相对于字体大小的倍数)
 
-### font {#font-short}
+### font {
 
-[`font`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font) 是一个复合属性，用来设置字体的大小、类型、粗细、行高等。
+#font-short;
+}
 
-- **`font-size`**
-- **`font-family`**
-- `font-style`
-- `font-variant`
-- `font-weight`
-- `font-stretch`
-- `line-height`
+[`font`](https: //developer.mozilla.org/zh-CN/docs/Web/CSS/font) 是一个复合属性，用来设置字体的大小、类型、粗细、行高等。
 
-::: tip
-其中 `font-size` 和 `font-family` 是必须设置的。
+- - - `font-size` \* _ - _ _ `font-family` _ _ -`font-style` - `font-variant` -
+      `font-weight` - `font-stretch` - `line-height`: : : tip 其中 `font-size` 和
+      `font-family` 是必须设置的。 其它是可选的: : : ```css
+      /_ font-size font-family \*/ font: 1.2em "Fira Sans", sans-serif;
 
-其它是可选的
-:::
-
-```css
-/* font-size font-family */
-font: 1.2em "Fira Sans", sans-serif;
-
-/* font-size/line-height font-family */
+/_ font-size/line-height font-family _/
 font: 1.2em/2 "Fira Sans", sans-serif;
 
-/* font-style font-weight font-size font-family */
+/_ font-style font-weight font-size font-family _/
 font: italic bold 1.2em "Fira Sans", sans-serif;
 
-/* font-stretch font-variant font-size font-family */
+/_ font-stretch font-variant font-size font-family _/
 font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+
+```
+
 ```

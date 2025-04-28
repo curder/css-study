@@ -1,4 +1,5 @@
 import { DefaultTheme, defineConfig } from "vitepress";
+import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -51,6 +52,9 @@ export default defineConfig({
     },
   },
   markdown: {
+    config(md) {
+      md.use(tabsMarkdownPlugin);
+    },
     container: {
       tipLabel: "提示",
       warningLabel: "警告",
