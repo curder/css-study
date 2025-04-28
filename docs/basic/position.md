@@ -106,3 +106,26 @@
 ```
 
 :::
+
+### 固定定位 `fixed` {#position-fixed}
+
+`fixed` 元素相对于浏览器窗口进行定位，当画布滚动时，固定不动。
+
+`left`、`top`、`right`、`bottom` 属性用于指定元素相对于浏览器窗口的偏移量。
+
+```html {3-5}
+<style>
+  .fixed {
+    position: fixed; /* 固定定位 */
+    right: 30px; /* 距离右侧 30px */
+    bottom: 30px; /* 距离底部 30px */
+  }
+</style>
+
+<div>
+  <span>span 标签内容</span>
+  <strong class="fixed">strong 标签内容</strong>
+  <a href="#">a 标签内容</a>
+  <p>p 标签内容</p>
+</div>
+```
