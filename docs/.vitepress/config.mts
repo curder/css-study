@@ -3,6 +3,7 @@ import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/css-study/",
   title: "CSS 学习",
   description: "A VitePress Site",
   themeConfig: {
