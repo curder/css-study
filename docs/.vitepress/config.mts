@@ -76,6 +76,7 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
         { text: "CSS 属性特性", link: "property-feature" },
         { text: "CSS 盒模型", link: "box-model" },
         { text: "CSS 设置背景", link: "background" },
+        { text: "CSS 精灵图", link: "sprite" },
         {
           text: "常用元素",
           link: "list",
@@ -88,7 +89,6 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
           ],
         },
         { text: "Emmet 常用语法", link: "emmet" },
-        { text: "CSS 精灵图", link: "sprite" },
       ],
     },
   ];

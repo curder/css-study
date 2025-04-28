@@ -5,6 +5,7 @@
 - [CSS 属性特性](./basic/property-feature.md)
 - [CSS 盒模型](./basic/box-model.md)
 - [CSS 设置背景](./basic/background.md)
+- [CSS 精灵图](./basic/sprite.md)
 - [常用元素](./basic/elements/list.md)
   - [列表 List](./basic/elements/list.md)
   - [表格 Table](./basic/elements/table.md)
