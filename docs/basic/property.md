@@ -215,9 +215,83 @@
 - `length` 长度值，比如 `16px` 或 `1em`
 - `number` 数字，比如 `1.5`(相对于字体大小的倍数)
 
+### 字体图标 {#font-icon}
+
+字体图标是一种使用字体来表示图标，比如 [`iconfont`](https://www.iconfont.cn/)、[`fontawesome`](https://fontawesome.com/) 等。
+
+字体图标相比于图片，有以下优点：
+
+- 放大缩小不会失真
+- 可以使用 CSS 来设置颜色、大小等属性
+- 体积小，加载速度快
+
+下面演示在 iconfont 中下载字体图标，并使用字体图标。
+
+1. 选择需要的图标，并收藏
+2. 点击购物车后选择“下载代码”
+
+::: tabs
+=== Unicode 编码
+
+```html
+<style>
+  @font-face {
+    font-family: "iconfont";
+    src: url("fonts/iconfont.ttf");
+  }
+  .iconfont {
+    font-family: "iconfont";
+    font-style: normal;
+    font-size: 100px;
+  }
+</style>
+
+<span class="iconfont">&#xe608;</span>
+<span class="iconfont">&#xe795;</span>
+<span class="iconfont">&#xe609;</span>
+<span class="iconfont">&#xe613;</span>
+```
+
+=== 字体类
+
+```html
+<style>
+  @font-face {
+    font-family: "iconfont";
+    src: url("fonts/iconfont.ttf");
+  }
+  .iconfont {
+    font-family: "iconfont";
+    font-style: normal;
+    font-size: 100px;
+  }
+  /** 使用伪元素来设置内容 */
+  .icon-home:before {
+    content: "\e608";
+  }
+  .icon-music:before {
+    content: "\e795";
+  }
+  .icon-video:before {
+    content: "\e609";
+  }
+  .icon-books:before {
+    content: "\e613";
+  }
+</style>
+<span class="iconfont icon-home"></span>
+<span class="iconfont icon-music"></span>
+<span class="iconfont icon-video"></span>
+<span class="iconfont icon-books"></span>
+```
+
+=== 预览
+![](./images/font-icons.png)
+:::
+
 ### font {#font-short}
 
-[`font`](https: //developer.mozilla.org/zh-CN/docs/Web/CSS/font) 是一个复合属性，用来设置字体的大小、类型、粗细、行高等。
+[`font`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font) 是一个复合属性，用来设置字体的大小、类型、粗细、行高等。
 
 - `font-size`
 - `font-family`
