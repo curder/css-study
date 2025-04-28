@@ -88,6 +88,7 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
           ],
         },
         { text: "Emmet 常用语法", link: "emmet" },
+        { text: "CSS 精灵图", link: "sprite" },
       ],
     },
   ];
