@@ -130,3 +130,63 @@
 
 行内级元素、inline-block 元素浮动后，其顶部将与所在行的顶部对齐。
 
+## 应用场景 {#application-scenarios}
+
+### 1. 分页器 {#pagination}
+
+:::tabs
+
+=== 效果预览
+![](images/pagination.png)
+
+=== 代码
+
+```html{9}
+<style>
+  /* 重置默认样式 */
+  body { background: #f5f5f6;}
+  ul { list-style: none; }
+  a { text-decoration: none; }
+
+  .pagination .page-item {
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    color: #3951b3;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  .pagination .page-item a,
+  .pagination .page-item span {
+    padding: 4px 8px;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: 6px;
+  }
+  .pagination .page-item a {
+    color: #3951b3;
+  }
+  .pagination .page-item a:hover,
+  .pagination .page-item.active span {
+    color: #fff;
+    background-color: #4e6ef2;
+  }
+</style>
+<ul class="pagination">
+  <li class="page-item active"><span>1</span></li>
+  <li class="page-item"><a href="#">2</a></li>
+  <li class="page-item"><a href="#">3</a></li>
+  <li class="page-item"><a href="#">4</a></li>
+  <li class="page-item"><a href="#">5</a></li>
+  <li class="page-item"><a href="#">6</a></li>
+  <li class="page-item"><a href="#">7</a></li>
+  <li class="page-item"><a href="#">8</a></li>
+  <li class="page-item"><a href="#">9</a></li>
+  <li class="page-item"><a href="#">10</a></li>
+  <li class="page-item"><a href="#">下一页&gt;</a></li>
+</ul>
+```
+
+:::
