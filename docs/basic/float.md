@@ -190,3 +190,45 @@
 ```
 
 :::
+
+### 2. 多列布局 {#multi-column-layout}
+
+在电商网站中常用到多列布局展示商品列表。
+
+:::tabs
+=== 效果预览
+![](images/multi-column-layout.png)
+
+=== 代码
+
+```html:line-numbers {9}
+<style>
+  .container {
+    width: 1190px;
+    margin: 0 auto;
+    height: 350px;
+    background: #eaeaea;
+  }
+  .container .items {
+    margin: 0 -5px; /* 向左右各偏移 -5px 的外边距 */
+  }
+  .container .item {
+    width: 230px;
+    height: 322px;
+    margin: 0 5px;
+    float: left;
+    background-color: #4e6ef2;
+  }
+</style>
+<div class="container">
+  <div class="items">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
+```
+
+:::
