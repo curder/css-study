@@ -283,3 +283,43 @@
 ```
 
 :::
+
+### 4. 浮动边框 {#floating-border}
+
+水平排列的元素需要一个边框，但是边框不能与元素重叠。
+
+:::tabs
+=== 效果预览
+![](images/float/floating-border.png)
+=== 代码
+
+```html:line-numbers {14,16-18}
+<style>
+  .container {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  .item {
+    float: left;
+    width: 221px;
+    height: 168px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e2e8f0;
+    margin-right: -1px;
+  }
+  .item.first-item {
+    width: 220px;
+  }
+</style>
+<div class="container">
+  <div class="item first-item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+```
+
+:::
