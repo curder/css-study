@@ -137,7 +137,7 @@
 :::tabs
 
 === 效果预览
-![](images/pagination.png)
+![](images/float/pagination.png)
 
 === 代码
 
@@ -197,7 +197,7 @@
 
 :::tabs
 === 效果预览
-![](images/multi-column-layout.png)
+![](images/float/multi-column-layout.png)
 
 === 代码
 
