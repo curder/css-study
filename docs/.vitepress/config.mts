@@ -79,6 +79,7 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
         { text: "CSS 设置背景", link: "background" },
         { text: "CSS 精灵图", link: "sprite" },
         { text: "CSS 元素定位", link: "position" },
+        { text: "CSS 元素浮动", link: "float" },
         {
           text: "常用元素",
           link: "list",

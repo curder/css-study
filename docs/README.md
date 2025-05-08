@@ -7,6 +7,7 @@
 - [CSS 设置背景](./basic/background.md)
 - [CSS 精灵图](./basic/sprite.md)
 - [CSS 元素定位](./basic/position.md)
+- [CSS 元素浮动](./basic/float.md)
 - [常用元素](./basic/elements/list.md)
   - [列表 List](./basic/elements/list.md)
   - [表格 Table](./basic/elements/table.md)
