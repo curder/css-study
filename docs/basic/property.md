@@ -30,6 +30,44 @@ cursor 可以设置鼠标指针（光标）在元素上面时的显示样式。
   <div class="cursor"></div>
   ```
 
+### `z-index` {#z-index}
+
+[`z-index`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/z-index) 属性用来设置定位元素的层叠顺序（仅对定位元素有效，即`position` 属性为 `relative`、`absolute` 和 `fixed` 的元素）
+
+`z-index` 的取值有：
+
+- `auto` 自动（默认值）
+- `number` 整数，比如 `1`、`2`、`3` 等或 `-1`
+
+```css
+/* 关键字值 */
+z-index: auto;
+
+/* 整数值 */
+z-index: 0;
+z-index: 3;
+z-index: 289;
+z-index: -1; /* 使用负值降低优先级 */
+
+/* 全局值 */
+z-index: inherit;
+z-index: initial;
+z-index: unset;
+```
+
+::: tip 比较原则
+
+1. 如果是兄弟关系
+
+- `z-index` 越大，层叠在越上面
+- `z-index` 相等，写在后面的那个元素层叠在上面
+
+2. 如果不是兄弟关系
+
+- 各自从元素自己以及祖先元素中，找出最邻近的 2 个定位元素进行比较
+- 而且这 2 个定位元素必须有设置 `z-index` 的具体数值
+  :::
+
 ## 文本 {#text}
 
 常见的文本属性包括：**`text-decoration`**、`text-transform`、`text-indent`、**`text-align`**、`word-spacing`、`letter-spacing` 等。
