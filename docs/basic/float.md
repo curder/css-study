@@ -16,6 +16,74 @@
 - `left`：元素向左浮动
 - `right`：元素向右浮动
 
+## 高度塌陷 {#height-collapse}
+
+浮动元素会脱离文档流，导致父元素的高度塌陷，所以不再向父元素汇报高度。
+
+父元素计算总高度时，就不会计算浮动子元素的高度，导致了高度坍塌的问题。
+
+解决父元素高度坍塌问题的过程，一般叫做清浮动（清理浮动、清除浮动）。
+
+::: tip 清除浮动目的
+让父元素计算总高度的时候，把浮动子元素的高度算进去
+:::
+
+## 清除浮动的方法 {#clear-float}
+
+### 添加块级子元素 {#add-block-child-element}
+
+`clear` 属性可以指定一个元素是否必须移动(清除浮动后)到在它之前的浮动元素下面。
+
+它的值有以下几种：
+
+- `none`：默认值，允许元素旁边有浮动元素
+- `left`：要求元素的顶部低于之前生成的所有左浮动元素的底部
+- `right`：要求元素的顶部低于之前生成的所有右浮动元素的底部
+- `both`：要求元素的顶部低于之前生成的所有浮动元素的底部
+
+```html {5-7,12}
+<style>
+  .item {
+    float: left; /* 脱离文档流 */
+  }
+  .clearfix {
+    clear: both; /* 清除浮动 */
+  }
+</style>
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="clearfix"></div>
+<div class="item3">3</div>
+```
+
+### 父元素添加`::after` 伪元素{#add-pseudo-element}
+
+```html:line-numbers {5-15,18}
+<style>
+  .item {
+    float: left;
+  }
+  .clearfix {
+    zoom: 1; /* 兼容IE6/7 */
+  }
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both; /* 清除浮动 */
+
+    visibility: hidden; /* 浏览器兼容 */
+    height: 0; /* 浏览器兼容 */
+  }
+</style>
+
+<div class="clearfix">
+  <div class="item">1</div>
+  <div class="item">2</div>
+</div>
+<div class="item3">3</div>
+```
+
 ## 常见规则 {#common-rules}
 
 ### 1. 脱离文档流 {#common-rules-one}
