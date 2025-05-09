@@ -47,8 +47,8 @@
 
 - [`flex-direction`](#flex-direction) 决定主轴方向（即项目的排列方向）。
 - [`flex-wrap`](#flex-wrap) 决定如果一条轴线排不下，如何换行。
-- `flex-flow`
-- `justify-content`
+- [`flex-flow`](#flex-flow) 是 `flex-direction` 属性和 `flex-wrap` 属性的简写形式。
+- [`justify-content`](#justify-content) 定义项目在主轴上的对齐方式。
 - `align-items`
 - `align-conten`
 
@@ -109,6 +109,32 @@
 
 ::: warning 注意
 `flex-direction`、`flex-wrap` 顺序任意, 并且都可以省略。
+:::
+
+### `justify-content` 属性 {#justify-content}
+
+`justify-content` 属性定义了项目在主轴上的对齐方式。
+
+```css
+.flex-container {
+  justify-content: flex-start | flex-end | center | space-between | space-around
+    | space-evenly;
+}
+```
+
+![配图来自css-tricks.com](images/flex/justify-content.svg)
+
+它可能取 5 个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
+
+::: info `justify-content` 属性的取值
+
+- `flex-start`（默认值）：左对齐
+- `flex-end`：右对齐
+- `center`： 居中
+- `space-between`：两端对齐，项目之间的间隔都相等。
+- `space-around`：每个项目两侧的间隔相等，所以，项目之间的间隔比项目与边框的间隔大一倍。
+- `space-evenly`：每个项目之间的间隔相等，项目与边框之间的间隔也相等。
+
 :::
 
 ## 项目属性 {#item-properties}
