@@ -49,8 +49,8 @@
 - [`flex-wrap`](#flex-wrap) 决定如果一条轴线排不下，如何换行。
 - [`flex-flow`](#flex-flow) 是 `flex-direction` 属性和 `flex-wrap` 属性的简写形式。
 - [`justify-content`](#justify-content) 定义项目在主轴上的对齐方式。
-- `align-items`
-- `align-conten`
+- [`align-items`](#align-items) 定义在交叉轴上如何对齐。
+- `align-content`
 
 :::
 
@@ -134,6 +134,30 @@
 - `space-between`：两端对齐，项目之间的间隔都相等。
 - `space-around`：每个项目两侧的间隔相等，所以，项目之间的间隔比项目与边框的间隔大一倍。
 - `space-evenly`：每个项目之间的间隔相等，项目与边框之间的间隔也相等。
+
+:::
+
+### `align-items` 属性 {#align-items}
+
+[`align-items` 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items)定义项目在交叉轴上如何对齐。
+
+```css
+.flex-container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+```
+
+![配图来自css-tricks.com](images/flex/align-items.svg)
+
+它可能取 5 个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。
+
+::: info `align-items` 属性的取值
+
+- `flex-start`：交叉轴的起点对齐。
+- `flex-end`：交叉轴的终点对齐。
+- `center`：交叉轴的中点对齐。
+- `baseline`: 项目的第一行文字的基线对齐。
+- `stretch`（默认值）：如果项目未设置高度或设为`auto`，将占满整个容器的高度。
 
 :::
 
