@@ -6,7 +6,7 @@
 
 ## 基本概念 {#basic-concepts}
 
-设置 flex 布局的元素叫 `flex container`，`flex container` 里面的直接子元素叫做 `flex items`。
+设置 flex 布局的元素叫 Flex 容器（`flex container`），称为“容器”。它的所有直接子元素自动成为容器成员，称为 Flex 项目（`flex item`），简称"项目"。
 
 ![](images/flex/container-and-items.png)
 
@@ -31,32 +31,63 @@
 
 ## flex 布局模型 {#flex-layout-model}
 
-- 主轴 `main axis`
+容器默认存在两根轴：水平的主轴（`main axis`）和垂直的交叉轴（`cross axis`）。
 
-  默认情况下 flex 布局默认按照主轴 `main axis` 来布局，默认的主轴是水平方向，从左到右。
+主轴的开始位置（与边框的交叉点）叫做 `main start`，结束位置叫做 `main end`；交叉轴的开始位置叫做 `cross start`，结束位置叫做 `cross end`。
 
-- 交叉轴 `cross axis`
-
-  交叉轴 `cross axis` 是垂直于主轴的轴。
+项目默认沿主轴排列。单个项目占据的主轴空间叫做 `main size`，占据的交叉轴空间叫做 `cross size`。
 
 ![](images/flex/flex-layout-model.png)
 
-## flex 布局属性 {#flex-layout-properties}
+## 容器属性 {#container-properties}
 
-- 应用在 `flex container` 上的 CSS 属性
+下面 6 个属性设置在容器上。
 
-  - `flex-flow`
-  - `flex-direction`
-  - `flex-wrap`
-  - `flex-flow`
-  - `justify-content`
-  - `align-items`
-  - `align-conten`
+::: info 容器属性的取值
 
-- 应用在 `flex items` 上的 CSS 属性
-  - `flex-grow`
-  - `flex-basis`
-  - `flex-shrink`
-  - `order`
-  - `align-self`
-  - `flex`
+- [`flex-direction`](#flex-direction) 决定主轴方向（即项目的排列方向）。
+- `flex-wrap`
+- `flex-flow`
+- `justify-content`
+- `align-items`
+- `align-conten`
+
+:::
+
+### `flex-direction` {#flex-direction}
+
+默认情况下，flex items 是沿着 main axis（主轴）从 main start 开始往 main end 方向排布。
+
+`flex-direction` 属性决定主轴 `mian axis` 的方向。
+
+```css
+.flex-container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
+
+![](images/flex/flex-direction.png)
+
+::: tip `flex-direction` 属性的取值
+
+- `row`（默认值）：主轴为水平方向，起点在左端。
+- `row-reverse`：主轴为水平方向，起点在右端。
+- `column`：主轴为垂直方向，起点在上沿。
+- `column-reverse`：主轴为垂直方向，起点在下沿。
+
+:::
+
+## 项目属性 {#item-properties}
+
+下面 6 个属性设置在容器上。
+
+::: info 项目属性的取值
+
+- `order`
+- `flex-grow`
+- `flex-shrink`
+- `flex-basis`
+- `flex`
+- `align-self`
+
+:::
