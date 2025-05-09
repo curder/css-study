@@ -215,6 +215,20 @@
 
 ### `flex-grow` 属性 {#flex-grow}
 
+[flex-grow 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow)定义项目的放大比例，默认为 0，即如果存在剩余空间，也不放大。
+
+```css
+.item {
+  flex-grow: <number>; /* default 0 */
+}
+```
+
+![配图来自css-tricks.com](images/flex/flex-grow.svg)
+
+如果所有项目的 `flex-grow` 属性都为 1，则它们将等分剩余空间（如果有的话）。如果一个项目的 `flex-grow` 属性为 2，其他项目都为 1，则前者占据的剩余空间将比其他项多一倍。
+
+### `flex-shrink` 属性 {#flex-shrink}
+
 [`flex-shrink` 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink)定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小。
 
 ```css
