@@ -192,15 +192,23 @@
 
 ::: info 项目属性的取值
 
-- `order`
-- `flex-grow`
-- `flex-shrink`
-- `flex-basis`
-- `flex`
-- `align-self`
+- [`order`](#order)
+- [`flex-grow`](#flex-grow)
+- [`flex-shrink`](#flex-shrink)
+- [`flex-basis`](#flex-basis)
+- [`flex`](#flex)
+- [`align-self`](#align-self)
 
 :::
 
+### `order` 属性 {#order}
+
+[order 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/order)定义项目的排列顺序。数值越小，排列越靠前，默认为 `0`。
+
+```css
+.item {
+  order: <integer>;
+}
 ```
 
-```
+![配图来自css-tricks.com](images/flex/order.svg)
