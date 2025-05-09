@@ -244,3 +244,39 @@
 如果一个项目的 `flex-shrink` 属性为 0，其它项目都为 1，则空间不足时，前者不缩小。
 
 负值对该属性无效。
+
+### `flex-basis` 属性 {#flex-basis}
+
+[flex-basis 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basic) 定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为 `auto`，即项目的本来大小。
+
+```css
+.item {
+  flex-basis: <length> | auto; /* default auto */
+}
+```
+
+它可以设为跟 width 或 height 属性一样的值（比如 350px），则项目将占据固定空间。
+
+![](images/flex/flex-basis.svg)
+
+### `flex`属性 {#flex}
+
+`flex` 属性是 `flex-grow`, `flex-shrink` 和 `flex-basis` 的简写，默认值为 `0 | 1 | auto`。后两个属性可选。
+
+```css
+.item {
+  flex: none | [ < "flex-grow" > < "flex-shrink" >? || < "flex-basis" >];
+}
+```
+
+该属性有两个快捷值：`auto` (`1 1 auto`) 和 `none` (`0 0 auto`)。
+
+建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+
+### `align-self` 属性 {#align-self}
+
+[`align-self` 属性]()允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto`，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch`。
+
+![](images/flex/align-self.svg)
+
+该属性可能取 6 个值，除了 `auto`，其他都与 `align-items` 属性完全一致。
