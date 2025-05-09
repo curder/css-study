@@ -275,7 +275,7 @@
 
 ### `align-self` 属性 {#align-self}
 
-[`align-self` 属性]()允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto`，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch`。
+[`align-self` 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-self)允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto`，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch`。
 
 ![](images/flex/align-self.svg)
 
