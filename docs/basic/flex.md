@@ -280,3 +280,62 @@
 ![](images/flex/align-self.svg)
 
 该属性可能取 6 个值，除了 `auto`，其他都与 `align-items` 属性完全一致。
+
+## 布局对齐问题
+
+在开发中使用 `flex` 布局时, 经常会遇到布局对齐的问题, 下面是一个常见的布局对齐问题。
+
+::: info 解决思路
+
+1. 添加对应列 - 2 个空元素，比如 `div`；
+2. 然后将它的宽度设置为项目的宽度；
+
+因为没有设置高度，所以不会占据空间。
+:::
+
+::: tabs
+
+=== 调整前
+![](images/flex/layout-alignment-problem.svg)
+
+=== 调整后
+![](images/flex/layout-alignment-solution.svg)
+
+=== 示例代码
+
+```html:line-numbers {8-10,29-31}
+<style>
+  .flex-container {
+    width: 500px;
+    display: flex; /* 容器设置为 flex 布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: space-between; /* 两端对齐 */
+  }
+  .flex-container div {
+    width: 110px; /* 设置每个 span 的宽度跟实际宽度一致*/
+  }
+  .flex-item {
+    background-color: #f1f1f1;
+    width: 110px;
+    height: 100px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+</style>
+<div class="flex-container">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+  <div class="flex-item">4</div>
+  <div class="flex-item">5</div>
+  <div class="flex-item">6</div>
+  <div class="flex-item">7</div>
+
+  <!-- 添加空div的数量等于列数 - 2 -->
+  <div></div>
+  <div></div>
+</div>
+```
+
+:::
