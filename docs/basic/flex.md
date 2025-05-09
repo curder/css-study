@@ -28,3 +28,35 @@
 
 - `display: flex`： `flex container` 以 block-level 形式存在
 - `display: inline-flex`： `flex container` 以 inline-level 形式存在
+
+## flex 布局模型 {#flex-layout-model}
+
+- 主轴 `main axis`
+
+  默认情况下 flex 布局默认按照主轴 `main axis` 来布局，默认的主轴是水平方向，从左到右。
+
+- 交叉轴 `cross axis`
+
+  交叉轴 `cross axis` 是垂直于主轴的轴。
+
+![](images/flex/flex-layout-model.png)
+
+## flex 布局属性 {#flex-layout-properties}
+
+- 应用在 `flex container` 上的 CSS 属性
+
+  - `flex-flow`
+  - `flex-direction`
+  - `flex-wrap`
+  - `flex-flow`
+  - `justify-content`
+  - `align-items`
+  - `align-conten`
+
+- 应用在 `flex items` 上的 CSS 属性
+  - `flex-grow`
+  - `flex-basis`
+  - `flex-shrink`
+  - `order`
+  - `align-self`
+  - `flex`
