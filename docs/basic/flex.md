@@ -8,7 +8,7 @@
 
 设置 flex 布局的元素叫 Flex 容器（`flex container`），称为“容器”。它的所有直接子元素自动成为容器成员，称为 Flex 项目（`flex item`），简称"项目"。
 
-![](images/flex/container-and-items.svg)
+![配图来自css-tricks.com](images/flex/container-and-items.svg)
 
 当 `flex container` 中的子元素变成了 `flex item` 时, 具备如下特点:
 
@@ -37,7 +37,7 @@
 
 项目默认沿主轴排列。单个项目占据的主轴空间叫做 `main size`，占据的交叉轴空间叫做 `cross size`。
 
-![](images/flex/flex-layout-model.svg)
+![配图来自css-tricks.com](images/flex/flex-layout-model.svg)
 
 ## 容器属性 {#container-properties}
 
@@ -46,7 +46,7 @@
 ::: info 容器属性的取值
 
 - [`flex-direction`](#flex-direction) 决定主轴方向（即项目的排列方向）。
-- `flex-wrap`
+- [`flex-wrap`](#flex-wrap) 决定如果一条轴线排不下，如何换行。
 - `flex-flow`
 - `justify-content`
 - `align-items`
@@ -54,7 +54,7 @@
 
 :::
 
-### `flex-direction` {#flex-direction}
+### `flex-direction` 属性 {#flex-direction}
 
 默认情况下，flex items 是沿着 main axis（主轴）从 main start 开始往 main end 方向排布。
 
@@ -66,15 +66,49 @@
 }
 ```
 
-![](images/flex/flex-direction.svg)
+![配图来自css-tricks.com](images/flex/flex-direction.svg)
 
-::: tip `flex-direction` 属性的取值
+::: info `flex-direction` 属性的取值
 
 - `row`（默认值）：主轴为水平方向，起点在左端。
 - `row-reverse`：主轴为水平方向，起点在右端。
 - `column`：主轴为垂直方向，起点在上沿。
 - `column-reverse`：主轴为垂直方向，起点在下沿。
 
+:::
+
+### `flex-wrap` 属性 {#flex-wrap}
+
+默认情况下，项目都排在一条线（又称"轴线"）上。`flex-wrap` 属性定义，如果一条轴线排不下，如何换行。
+
+![配图来自css-tricks.com](images/flex/flex-wrap.svg)
+
+```css
+.flex-container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+```
+
+::: info `flex-wrap` 属性的取值
+
+- `nowrap`（默认）：不换行。
+- `wrap`：换行，第一行在上方。
+- `wrap-reverse`：换行，第一行在下方。
+
+:::
+
+### `flex-flow` 属性 {#flex-flow}
+
+`flex-flow` 属性是 `flex-direction` 属性和 `flex-wrap` 属性的简写形式，默认值为 `row nowrap`。
+
+```css
+.flex-container {
+  flex-flow: <flex-direction> || <flex-wrap>;
+}
+```
+
+::: warning 注意
+`flex-direction`、`flex-wrap` 顺序任意, 并且都可以省略。
 :::
 
 ## 项目属性 {#item-properties}
@@ -91,3 +125,7 @@
 - `align-self`
 
 :::
+
+```
+
+```
