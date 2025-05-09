@@ -38,7 +38,7 @@ export default defineConfig({
     skipToContentLabel: "跳过到内容",
     outline: {
       level: "deep",
-      label: "目录章节",
+      label: "页面章节",
     },
     editLink: {
       pattern: "https://github.com/curder/css-study/edit/main/docs/:path",
