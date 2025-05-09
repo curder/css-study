@@ -192,12 +192,12 @@
 
 ::: info 项目属性的取值
 
-- [`order`](#order)
-- [`flex-grow`](#flex-grow)
-- [`flex-shrink`](#flex-shrink)
-- [`flex-basis`](#flex-basis)
-- [`flex`](#flex)
-- [`align-self`](#align-self)
+- [`order`](#order) 定义项目的排列顺序。
+- [`flex-grow`](#flex-grow) 定义项目的放大比例，默认为 0，即如果存在剩余空间，也不放大。
+- [`flex-shrink`](#flex-shrink) 定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小。
+- [`flex-basis`](#flex-basis) 定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为 `auto`，即项目的本来大小。
+- [`flex`](#flex) 是 `flex-grow`, `flex-shrink` 和 `flex-basis` 的简写，默认值为 `0 1 auto`。后两个属性可选。
+- [`align-self`](#align-self) 允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto`，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch`。
 
 :::
 
@@ -212,3 +212,21 @@
 ```
 
 ![配图来自css-tricks.com](images/flex/order.svg)
+
+### `flex-grow` 属性 {#flex-grow}
+
+[`flex-shrink` 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink)定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小。
+
+```css
+.item {
+  flex-shrink: <number>; /* default 1 */
+}
+```
+
+![配图来自css-tricks.com](images/flex/flex-shrink.svg)
+
+如果所有项目的 `flex-shrink` 属性都为 1，当空间不足时，都将等比例缩小。
+
+如果一个项目的 `flex-shrink` 属性为 0，其它项目都为 1，则空间不足时，前者不缩小。
+
+负值对该属性无效。
