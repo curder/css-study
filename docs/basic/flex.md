@@ -8,7 +8,7 @@
 
 设置 flex 布局的元素叫 Flex 容器（`flex container`），称为“容器”。它的所有直接子元素自动成为容器成员，称为 Flex 项目（`flex item`），简称"项目"。
 
-![](images/flex/container-and-items.png)
+![](images/flex/container-and-items.svg)
 
 当 `flex container` 中的子元素变成了 `flex item` 时, 具备如下特点:
 
@@ -37,7 +37,7 @@
 
 项目默认沿主轴排列。单个项目占据的主轴空间叫做 `main size`，占据的交叉轴空间叫做 `cross size`。
 
-![](images/flex/flex-layout-model.png)
+![](images/flex/flex-layout-model.svg)
 
 ## 容器属性 {#container-properties}
 
@@ -66,7 +66,7 @@
 }
 ```
 
-![](images/flex/flex-direction.png)
+![](images/flex/flex-direction.svg)
 
 ::: tip `flex-direction` 属性的取值
 
