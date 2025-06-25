@@ -72,9 +72,14 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
       text: "",
       base: "/basic/",
       items: [
-        { text: "CSS 属性",
-          link: "property/",
-          collapsed: false,
+        {
+          text: "CSS 属性",
+          link: "/",
+          collapsed: true,
+          base: "/basic/property/",
+          items: [
+            {text: "transform", link: "transform"},
+          ]
         },
         { text: "CSS 选择器", link: "selector" },
         { text: "CSS 属性特性", link: "property-feature" },
