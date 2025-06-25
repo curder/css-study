@@ -8,7 +8,7 @@ export default defineConfig({
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "CSS基础", link: "/basic/property" }],
+    nav: [{ text: "CSS基础", link: "/basic/property", activeMatch: "/basic/" }],
 
     sidebar: sidebarBasic(),
 
@@ -77,9 +77,7 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
           link: "/",
           collapsed: true,
           base: "/basic/property/",
-          items: [
-            {text: "transform", link: "transform"},
-          ]
+          items: [{ text: "transform", link: "transform" }],
         },
         { text: "CSS 选择器", link: "selector" },
         { text: "CSS 属性特性", link: "property-feature" },

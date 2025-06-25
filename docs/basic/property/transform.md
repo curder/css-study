@@ -68,6 +68,8 @@ transform 属性函数很多，常用的函数包括：
 
 `translate()` 函数用于移动元素在平面上的位置。
 
+它是 `translateX()` 函数和 `translateY()` 函数的缩写。
+
 ```css
 .box {
   transform: translate(100px); /* 设置x轴平移100像素 */
