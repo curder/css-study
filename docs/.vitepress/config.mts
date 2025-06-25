@@ -72,7 +72,10 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
       text: "",
       base: "/basic/",
       items: [
-        { text: "CSS 属性", link: "property" },
+        { text: "CSS 属性",
+          link: "property/",
+          collapsed: false,
+        },
         { text: "CSS 选择器", link: "selector" },
         { text: "CSS 属性特性", link: "property-feature" },
         { text: "CSS 盒模型", link: "box-model" },
