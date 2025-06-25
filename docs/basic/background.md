@@ -32,13 +32,13 @@
 
 利用 `background-image` 属性和 `<img />` 元素都能实现图片的现实需求，它们有何差异呢？
 
-|                        | `img`              | `background-image` |
-| ---------------------- | ------------------ | ------------------ |
-| 性质                   | HTML 元素          | CSS 样式           |
-| 图片是否占用空间       | :white_check_mark: | :x:                |
-| 浏览器邮件直接查看地址 | :white_check_mark: | :x:                |
-| 支持 CSS Sprite        | :x:                | :white_check_mark: |
-| 更可能被搜索引擎收录   | :white_check_mark: | :x:                |
+|               | `img`              | `background-image` |
+|---------------|--------------------|--------------------|
+| 性质            | HTML 元素            | CSS 样式             |
+| 图片是否占用空间      | :white_check_mark: | :x:                |
+| 浏览器邮件直接查看地址   | :white_check_mark: | :x:                |
+| 支持 CSS Sprite | :x:                | :white_check_mark: |
+| 更可能被搜索引擎收录    | :white_check_mark: | :x:                |
 
 ## background-repeat
 
