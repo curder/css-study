@@ -84,3 +84,5 @@ transform 属性函数很多，常用的函数包括：
 
    - 设置 X 轴平移，参照的是元素自身的宽度
    - 设置 Y 轴平移，参照的是元素自身的高度
+
+在实际开发场景中，可以[使用 `translate()` 函数实现元素的垂直居中](/tips/horizontal-and-vertical-center.md#use-vertical-center)。

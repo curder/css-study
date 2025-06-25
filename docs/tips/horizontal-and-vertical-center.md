@@ -61,7 +61,7 @@
 
 ## 垂直居中 {#vertical-center}
 
-### 绝对定位 {#absolute-position}
+### 绝对定位 {#use-absolute-position}
 
 对于绝对定位元素，当它存在高度时，可以通过设置 `{top: 0; bottom: 0; margin: auto 0;}` 实现垂直居中。
 
@@ -124,7 +124,7 @@
 </div>
 ```
 
-### `transform` 属性 {#transform-property}
+### `transform` 属性 {#use-transform-property}
 
 使用 `transform` 属性实现元素的垂直居中，需要注意：
 
