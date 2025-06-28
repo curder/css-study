@@ -5,6 +5,7 @@
   - [transform-origin](./basic/property/transform-origin.md)
   - [transition](./basic/property/transition.md)
   - [animation](./basic/property/animation.md)
+  - [vertical-align](./basic/property/vertical-align.md)
 - [CSS 选择器](./basic/selector.md)
 - [CSS 属性特性](./basic/property-feature.md)
 - [CSS 盒模型](./basic/box-model.md)
