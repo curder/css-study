@@ -80,6 +80,7 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
           items: [
             { text: "transform", link: "transform" },
             { text: "transform-origin", link: "transform-origin" },
+            { text: "transition", link: "transition" },
           ],
         },
         { text: "CSS 选择器", link: "selector" },
