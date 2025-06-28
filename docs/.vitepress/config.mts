@@ -77,7 +77,10 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
           link: "/",
           collapsed: true,
           base: "/basic/property/",
-          items: [{ text: "transform", link: "transform" }],
+          items: [
+            { text: "transform", link: "transform" },
+            { text: "transform-origin", link: "transform-origin" },
+          ],
         },
         { text: "CSS 选择器", link: "selector" },
         { text: "CSS 属性特性", link: "property-feature" },

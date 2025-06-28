@@ -2,6 +2,7 @@
 
 - [CSS 属性](./basic/property/index.md)
   - [transform](./basic/property/transform.md)
+  - [transform-origin](./basic/property/transform-origin.md)
 - [CSS 选择器](./basic/selector.md)
 - [CSS 属性特性](./basic/property-feature.md)
 - [CSS 盒模型](./basic/box-model.md)
