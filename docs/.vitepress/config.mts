@@ -78,9 +78,9 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
           collapsed: true,
           base: "/basic/property/",
           items: [
-            { text: "transform", link: "transform" },
-            { text: "transform-origin", link: "transform-origin" },
-            { text: "transition", link: "transition" },
+            { text: "transform 形变", link: "transform" },
+            { text: "transform-origin 变形原点", link: "transform-origin" },
+            { text: "transition 过渡动画", link: "transition" },
           ],
         },
         { text: "CSS 选择器", link: "selector" },
