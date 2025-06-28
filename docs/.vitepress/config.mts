@@ -8,7 +8,7 @@ export default defineConfig({
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "CSS基础", link: "/basic/property", activeMatch: "/basic/" }],
+    nav: [{ text: "基础", link: "/basic/property", activeMatch: "/basic/" }],
 
     sidebar: sidebarBasic(),
 
