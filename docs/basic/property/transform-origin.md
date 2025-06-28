@@ -1,4 +1,4 @@
-# `transform-origin` 属性 {#transform-origin}
+# `transform-origin` 变形原点属性 {#transform-origin}
 
 [`transform-origin` 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)用于设置元素变形的原点。
 

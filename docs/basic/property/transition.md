@@ -1,4 +1,4 @@
-# 过渡动画 `transition` 属性 {#transition-property}
+# `transition` 过渡动画属性 {#transition-property}
 
 [CSS transition](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition) 属性提供了一种在更改 CSS 属性时，控制动画速度的方法。
 
