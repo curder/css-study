@@ -66,7 +66,7 @@ transform 属性函数很多，常用的函数包括：
 
 ### 位移 `transalte()` 函数 {#transalte-function}
 
-`translate()` 函数用于移动元素在平面上的位置。
+[`translate()` 函数](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/translate)用于移动元素在平面上的位置。
 
 它是 `translateX()` 函数和 `translateY()` 函数的缩写。
 
@@ -86,3 +86,19 @@ transform 属性函数很多，常用的函数包括：
    - 设置 Y 轴平移，参照的是元素自身的高度
 
 在实际开发场景中，可以[使用 `translate()` 函数实现元素的垂直居中](/tips/horizontal-and-vertical-center.md#use-vertical-center)。
+
+### 缩放 `scale()` 函数 {#scale-function}
+
+[`scale()` 函数](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/scale)可以改变元素的大小，包括宽度和高度。
+
+它是 `scaleX()` 函数和 `scaleY()` 函数的缩写。
+
+提供一个值时，设置 X 轴的缩放，提供两个值时，同时设置 X 和 Y 轴的缩放。
+
+```css
+.box {
+  transform: scale(1); /* 元素不缩放 */
+  transform: scale(2); /* 元素宽度放大一倍 */
+  transform: scale(2, 0.5); /* 元素宽度放大一倍，高度缩小一倍 */
+}
+```
