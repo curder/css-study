@@ -121,3 +121,23 @@ transform 属性函数很多，常用的函数包括：
   <div class="box"></div>
 </div>
 ```
+
+### 旋转 `rotate()` 函数 {#rotate-function}
+
+[`rotate()` 函数](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/rotate)可以改变元素的旋转角度。
+
+提供一个值时，用于设置旋转角度。常用的旋转角度单位有：
+
+- `deg`：角度单位，代表角度值。
+- `rad`：弧度单位，代表弧度值。
+- `turn`：圈单位，代表一圈的角度值。
+
+示例代码如下：
+
+```css
+.box {
+  transform: rotate(45deg); /* 元素旋转45度 */
+  transform: rotate(45rad); /* 元素旋转45弧度 */
+  transform: rotate(0.5turn); /* 元素旋转0.5圈 */
+}
+```
