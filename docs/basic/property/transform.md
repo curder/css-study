@@ -1,4 +1,4 @@
-# CSS 属性 transform {#css-property-transform}
+# transform 属性 {#transform-property}
 
 CSS [`transform` 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform)允许对某个元素进行形变，包括旋转、缩放、平移、倾斜等。
 
