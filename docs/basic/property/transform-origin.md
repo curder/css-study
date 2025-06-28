@@ -1,6 +1,6 @@
 # `transform-origin` 属性 {#transform-origin}
 
-[`transform-origin` 函数](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)用于设置元素变形的原点。
+[`transform-origin` 属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)用于设置元素变形的原点。
 
 当使用 `transform` 设置元素设置[缩放`scale()`](./transform#scale-function)、[旋转`rotate()`](./transform#rotate-function)或[倾斜`skew()`](./transform#skew-function)时，`transform-origin` 属性定义了变形的中心点。
 
