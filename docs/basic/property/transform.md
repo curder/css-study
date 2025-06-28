@@ -142,3 +142,29 @@ transform 属性函数很多，常用的函数包括：
 }
 ```
 
+### 倾斜 `skew()` 函数 {#skew-function}
+
+其实对于文本的倾斜，在 CSS 中可以使用 `font-style: italic;` 来实现。
+
+有时需要对元素进行倾斜变形，可以使用 `skew()` 函数。
+
+[`skew()` 函数](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/skew)用于倾斜元素。
+
+它是 `skewX()` 函数和 `skewY()` 函数的缩写。
+
+提供一个值时，设置 X 轴的倾斜角度，提供两个值时，同时设置 X 和 Y 轴的倾斜角度。
+
+```html
+<style>
+  .container {
+    width: 200px;
+    height: 100px;
+    background-color: orange;
+  }
+  .container:hover {
+    transform: skew(20deg, 0);
+  }
+</style>
+
+<div class="container">Hello world</div>
+```
