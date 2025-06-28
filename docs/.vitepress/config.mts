@@ -81,6 +81,7 @@ function sidebarBasic(): DefaultTheme.SidebarItem[] {
             { text: "transform 形变", link: "transform" },
             { text: "transform-origin 变形原点", link: "transform-origin" },
             { text: "transition 过渡动画", link: "transition" },
+            { text: "animation 动画", link: "animation" },
           ],
         },
         { text: "CSS 选择器", link: "selector" },
