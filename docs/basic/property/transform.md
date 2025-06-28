@@ -102,3 +102,22 @@ transform 属性函数很多，常用的函数包括：
   transform: scale(2, 0.5); /* 元素宽度放大一倍，高度缩小一倍 */
 }
 ```
+
+鼠标悬浮时，元素会放大一倍，示例代码如下：
+
+```html
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    &:hover {
+      transform: scale(2);
+    }
+  }
+</style>
+
+<div class="container">
+  <div class="box"></div>
+</div>
+```
